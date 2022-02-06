@@ -1,0 +1,179 @@
+<div class = "form1">
+        <form  [formGroup]='registerData' id="form1" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" (submit)='register($event)'>
+            <h2 class="w3-center">Registration Form</h2>
+          <table width="1100" height="427">
+        
+        
+          <tr>
+              <td width="526"><h2>&nbsp;</h2>
+                <h2><span class="style2">Voter Id</span><span class="style3">*</span></h2></td>
+              <td width="566"><label> <br />
+              <br />
+              <input type="text" formControlName="voterId" required="required" class="form-control" />
+                <br />
+                <br />
+                <p *ngIf='get("voterId").touched && get("voterId").invalid' style='color: red;'>Voter Id field is required</p>
+              </label></td>
+            </tr>
+        
+            <tr>
+              <td width="526"><h2>&nbsp;</h2>
+                <h2><span class="style2">Password</span><span class="style3">*</span><br /><font size=3>(Minimum 8 Characters)</font></h2></td>
+              <td width="566"><label> <br />
+              <br />
+              <input type="password" formControlName="password" required="required" minlength="8" class="form-control"id="password" />
+                <br />
+                <br />
+                <p *ngIf='get("password").touched && get("password").invalid' style='color: red;'>
+                  <span *ngIf='get("password").value == ""'>password is required</span>
+                  <br/>
+                  <span *ngIf='get("password").errors?.minlength'>password must be of minimum 8 characters</span>
+                </p>
+
+              </label></td>
+            </tr>
+            <tr>
+            <td width="526"><h2>&nbsp;</h2>
+                <h2><span class="style2">Confirm Password</span><span class="style3">*</span></h2></td>
+              <td width="566"><label> <br />
+              <br />
+              <input type="password" formControlName="confirmPassword" required="required" class="form-control" id="confirm_password"/>
+              <span id='message'></span>
+                <br />
+                <br />
+                <p *ngIf='get("password").value != get("confirmPassword").value' style='color: red;'>password and confirm password must be same</p>
+
+              </label></td>
+            </tr>
+        
+        
+            <tr>
+              <td width="526"><h2>&nbsp;</h2>
+                <h2><span class="style2">Enter Name</span><span class="style3">*</span></h2></td>
+              <td width="566"><label> <br />
+              <br />
+              <input type="text" formControlName="name" required="required" class="form-control" />
+                <br />
+                <br />
+                <p *ngIf='get("name").touched && get("name").invalid' style='color: red;'>name field is required</p>
+              </label></td>
+            </tr>
+        
+           
+            <tr>
+              <td><h2 class="style2">&nbsp;</h2>
+                <h2 class="style2">Enter Father Name<span class="style3">*</span></h2></td>
+              <td><label> <br />
+                  <br />
+                  <input type="text" formControlName="fatherName"  required="required" class="form-control"/>
+                <br />
+                <br />
+                <p *ngIf='get("fatherName").touched && get("fatherName").invalid' style='color: red;'>father name field is required</p>
+              </label></td>
+            </tr>
+            <tr>
+              <td height="37"><h2 class="style2">&nbsp;</h2>
+                <h2 class="style2">Gender</h2></td>
+              <td><label> <br />
+                  <br />
+                  <input formControlName="gender" type="radio" value="Male" />
+              Male 
+              <input formControlName="gender" type="radio" value="Female" />
+              Female<br />
+              <br />
+              </label></td>
+            </tr>
+            <tr>
+              <td height="88"><h2 class="style2">&nbsp;</h2>
+                <h2 class="style2">D.O.B<span class="style3">*</span></h2></td>
+              <td><label>
+                </label>
+                <p>&nbsp;</p>
+                <input type="date" formControlName='dob' >
+                <br/>
+                <br/>
+                <p *ngIf='get("dob").touched && get("dob").invalid' style='color: red;'>D.O.B field is required</p>
+
+                </td>
+            </tr>
+            <tr>
+              <td><h2 class="style2">&nbsp;</h2>
+                <h2 class="style2">Address<span class="style3">*</span></h2></td>
+              <td><label> <br />
+                  <br />
+                  <input type="text" formControlName="address" required="required" class="form-control" />
+                <br />
+                <br />
+                <p *ngIf='get("address").touched && get("address").invalid' style='color: red;'>address field is required</p>
+
+              </label></td>
+            </tr>
+            <tr>
+              <td><h2 class="style2">&nbsp;</h2>
+                <h2 class="style2">City<span class="style3">*</span></h2></td>
+              <td><label> <br />
+                  <br />
+                  <input type="text" formControlName="city" required="required" class="form-control" />
+                <br />
+                <br />
+                <p *ngIf='get("city").touched && get("city").invalid' style='color: red;'>city field is required</p>
+
+              </label></td>
+            </tr>
+            <tr>
+              <td><h2 class="style2">&nbsp;</h2>
+                <h2 class="style2">State<span class="style3">*</span></h2></td>
+              <td><label> <br />
+                  <br />
+                  <input type="text" formControlName="state"  required="required" class="form-control"/>
+                <br />
+                <br />
+                <p *ngIf='get("state").touched && get("state").invalid' style='color: red;'>state field is required</p>
+              </label></td>
+            </tr>
+            <tr>
+              <td><h2 class="style2">&nbsp;</h2>
+                <h2 class="style2">Pincode<span class="style3">*</span></h2></td>
+              <td><label> <br />
+                  <br />
+                  <input type="text" formControlName="pincode" required="required" class="form-control" />
+                      <br />
+                      <br />
+                <p *ngIf='get("pincode").touched && get("pincode").invalid' style='color: red;'>pincode field is required</p>
+              </label></td>
+            </tr>
+            <tr>
+              <td><h2 class="style2">&nbsp;</h2>
+                <h2 class="style2">Upload Picture<span class="style3">*</span></h2></td>
+                <br />
+                <br />  
+              <td><label><br />
+                  <br />
+              Browse Picture 
+                  
+                  <input type="file" name="fileToUpload" required="required" class="form-control" (change)='addFile($event)'>
+                      <br />
+                      <br />
+              </label></td>
+            </tr>
+          </table>
+          <br />
+          <p>
+            <input type="submit" [disabled]='get("name").invalid ||
+              get("fatherName").invalid ||
+              get("password").invalid ||
+              get("address").invalid ||
+              get("city").invalid ||
+              get("state").invalid || 
+              get("pincode").invalid || 
+              get("voterId").invalid || 
+              get("dob").invalid ||
+              get("password").value != get("confirmPassword").value' class="button5">
+          </p>
+        <br />
+          <div class="container signin">
+            <h5>Already have an account? <a routerLink="/login">Sign in</a>.</h5>
+          </div>
+        </form>
+        </div>
+        

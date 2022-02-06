@@ -1,0 +1,20 @@
+.container{
+    margin-top:0.7in;
+    margin-left: 90px;
+    margin-bottom:0.7in;
+    box-shadow: 1px 1px 15px rgba(30,30,30,.5);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+ ul {
+     list-style: none;
+ }
+
+ ul li{
+     float: left;
+
+ }
+ 
+

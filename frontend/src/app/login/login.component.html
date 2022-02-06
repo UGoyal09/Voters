@@ -1,0 +1,94 @@
+<div class="login-card">
+ 
+        <div class="log_head">
+         
+        <h1>LOGIN</h1>
+         
+         
+        <img src="assets/images/lock.jpg" alt="lock" class="lock" />
+        </div>
+         
+         
+        <div class="log_body">
+         
+        <form [formGroup]='loginData' (submit)='login($event)'>
+         
+        <table width="200" >
+         
+         
+        <tr>
+         
+         
+        <td><input type="text" formControlName="username" placeholder="Enter Voter ID" class="log_user" ></td>
+         
+         
+        </tr>
+         
+         
+        <tr>
+         
+         
+        <td>&nbsp;</td>
+         
+         
+        </tr>
+         
+         
+        <tr>
+         
+         
+        <td><input type="password" formControlName="password" placeholder="Enter Password" class="log_Pass"></td>
+         
+         
+        </tr>
+         
+         
+        <tr>
+         
+         
+        <td>&nbsp;</td>
+         
+         
+        </tr>
+        
+         
+         
+        <tr>
+         
+         
+        <td><input type="submit" class="login-submit"></td>
+         
+         
+        </tr>
+         
+         
+        <tr>
+         
+         
+        <td>&nbsp;</td>
+         
+         
+        </tr>
+         
+         
+        <tr>
+         
+         
+        <td>Don't have an account ? <a routerLink="/registration" rel="register">Register Now</a></td>
+         
+         
+        </tr>
+         
+         
+        </table>
+         
+         
+         
+        </form>
+         
+         
+        </div>
+         
+         
+         
+        </div>

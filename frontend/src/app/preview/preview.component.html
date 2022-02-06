@@ -1,0 +1,84 @@
+<div *ngIf='toShow'>
+
+    <div id="voterdesign">
+        <div width="100%">
+
+            <div style="float: left;"><img src="assets/images/emblem.png" width="75" height="85" /></div>
+            <div style="float: right;"><img src="assets/images/AAYOG.png" width="145" height="85" /></div>
+
+            <hr style='clear:both;margin-top: 10px;' />
+
+
+            <img style="margin-left: calc(50% - 100px);" [src]='"userImages/"+userDetails?.pic' width="200"
+                height='200'>
+
+
+            <div class="details">
+
+                <div>
+
+                    <label>VOTER ID</label>
+                    <p>{{userDetails?.voterid}}</p>
+                </div>
+
+                <div>
+
+                    <label>VOTER'S NAME</label>
+                    <p>{{userDetails?.name}}</p>
+
+                </div>
+
+                <div>
+
+                    <label>FATHER'S NAME</label>
+                    <p>{{userDetails?.fname}}</p>
+                </div>
+
+                <div>
+
+                    <label>GENDER</label>
+                    <p>{{userDetails?.gender}}</p>
+                </div>
+
+                <div>
+
+                    <label>DATE OF BIRTH</label>
+                    <p>{{userDetails?.dob}}</p>
+                </div>
+                <div>
+
+                    <label>ADDRESS</label>
+                    <p>{{userDetails?.address}}</p>
+                </div>
+
+                <div>
+
+                    <label>CITY</label>
+                    <p>{{userDetails?.city}}</p>
+                </div>
+
+                <div>
+
+                    <label>STATE</label>
+                    <p>{{userDetails?.state}}</p>
+                </div>
+
+                <div>
+
+                    <label>PINCODE</label>
+                    <p>{{userDetails?.pincode}}</p>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <button
+        style="border-radius: 5px;padding:10px 20px;background:rgb(19,149,199);color:#f1f1f1;float: right;margin-right: 30px;margin-bottom: 20px;"
+        (click)='printCard()'>Print</button>
+
+</div>
+
+<div class="warn" *ngIf='!toShow'>Unauthorized Access</div>
